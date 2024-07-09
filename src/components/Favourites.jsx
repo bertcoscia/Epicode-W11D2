@@ -12,7 +12,7 @@ const Favourites = () => {
       <Row>
         <Col xs={10} className="mx-auto my-3">
           <h1>Favourites</h1>
-          <Link className="d-none" to={"/"}>
+          <Link className="btn btn-info" to={"/"}>
             Home
           </Link>
         </Col>
