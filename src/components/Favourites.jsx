@@ -13,7 +13,7 @@ const Favourites = () => {
       <Row>
         <Col xs={10} className="mx-auto my-3">
           <h1>Favourites</h1>
-          <Link className="btn btn-info" to={"/"}>
+          <Link className="btn btn-info my-3" to={"/"}>
             Home
           </Link>
         </Col>
@@ -34,7 +34,7 @@ const Favourites = () => {
       <Row>
         <Col xs={10} className="mx-auto my-3">
           <h1>Favourites</h1>
-          <Link className="btn" to={"/"}>
+          <Link className="btn btn-info my-3" to={"/"}>
             Home
           </Link>
           <h2>There are no favourites</h2>
