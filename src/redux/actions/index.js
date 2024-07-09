@@ -1,9 +1,9 @@
 export const ADD_TO_FAVOURITE = "ADD_TO_FAVOURITE";
-export const REMOVE_TO_FAVOURITE = "REMOVE_TO_FAVOURITE";
+export const REMOVE_FROM_FAVOURITE = "REMOVE_FROM_FAVOURITE";
 export const GET_JOBS = "GET_JOBS";
 
 export const getJobsAction = (baseEndpoint, query) => {
-  return async (dispatch, getState) => {
+  return async dispatch => {
     try {
       const response = await fetch(`${baseEndpoint}${query}&limit=20`);
       if (response.ok) {
@@ -20,3 +20,5 @@ export const getJobsAction = (baseEndpoint, query) => {
     }
   };
 };
+
+export const removeFromFavouritesAction = fav => ({ type: REMOVE_FROM_FAVOURITE, payload: fav });

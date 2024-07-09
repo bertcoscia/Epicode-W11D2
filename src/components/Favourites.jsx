@@ -2,6 +2,7 @@ import { Container, Row, Col, ListGroup } from "react-bootstrap";
 import { StarFill } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { removeFromFavouritesAction } from "../redux/actions";
 
 const Favourites = () => {
   const favourites = useSelector(state => state.favourite.content);
@@ -20,15 +21,7 @@ const Favourites = () => {
           <ListGroup>
             {favourites.map((fav, index) => (
               <ListGroup.Item key={index}>
-                <StarFill
-                  className="me-2"
-                  onClick={() =>
-                    dispatch({
-                      type: "REMOVE_FROM_FAVOURITE",
-                      payload: fav
-                    })
-                  }
-                />
+                <StarFill className="me-2" onClick={() => dispatch(removeFromFavouritesAction(fav))} />
                 <Link to={"/" + fav}>{fav}</Link>
               </ListGroup.Item>
             ))}
